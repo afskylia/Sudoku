@@ -1,10 +1,10 @@
 import csv
-import json
-import numpy as np
-import pandas as pd
 from copy import deepcopy
+import json
 from enum import Enum
 from random import randint, shuffle
+import pandas as pd
+import numpy as np
 
 
 class Difficulty(Enum):
@@ -215,7 +215,7 @@ def generate_boards_json(num=1, difficulty=Difficulty.INTERMEDIATE):
         print(board)
         grid_json = json.dumps(board.grid.tolist())
         original_json = json.dumps(board.original.tolist())
-        #json_string = '{"grid":"' + grid_json + '","original":"' + original_json + '"}'
+        # json_string = '{"grid":"' + grid_json + '","original":"' + original_json + '"}'
         obj = {"grid": grid_json, "original": original_json}
         boards.append(obj)
 
